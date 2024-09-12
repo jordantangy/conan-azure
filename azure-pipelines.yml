@@ -25,6 +25,7 @@ steps:
     artifactoryConnection: 'jordanta-rt'
     conanRepo: 'conan-test-v'
     purgeExistingRemotes: false
+    
 
 - task: JFrogConan@1
   inputs:
@@ -33,7 +34,8 @@ steps:
     extraArguments: '-r fadir-conan'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    
+    workingDirectory: '/Users/jordanta/myagent/_work/2/s/testconan'
+
 - task: JFrogConan@1
   inputs:
     conanCommand: 'Create'
@@ -42,7 +44,8 @@ steps:
     extraArguments: '-r fadir-conan'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    
+    workingDirectory: '/Users/jordanta/myagent/_work/2/s/testconan'
+
 - task: JFrogConan@1
   inputs:
     conanCommand: 'Upload'
@@ -50,6 +53,9 @@ steps:
     extraArguments: '-r fadir-conan --all'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
+    workingDirectory: '/Users/jordanta/myagent/_work/2/s/testconan'
+
+
 
 - task: JFrogPublishBuildInfo@1
   inputs:
