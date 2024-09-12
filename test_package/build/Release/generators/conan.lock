@@ -1,0 +1,25 @@
+{
+ "graph_lock": {
+  "nodes": {
+   "0": {
+    "options": "test:fPIC=True\ntest:shared=False",
+    "requires": [
+     "1"
+    ],
+    "path": "../../../conanfile.py",
+    "context": "host"
+   },
+   "1": {
+    "ref": "test/1.0@test/1.0#8202ddb566ba7436625283e028d463b6",
+    "options": "fPIC=True\nshared=False",
+    "package_id": "c6a7b978c36bfbdf05646cef650d3b8d3c8bea46",
+    "prev": "c26017262d11200befbd9cee7cefd978",
+    "modified": true,
+    "context": "host"
+   }
+  },
+  "revisions_enabled": true
+ },
+ "version": "0.4",
+ "profile_host": "[settings]\narch=armv8\narch_build=armv8\nbuild_type=Release\ncompiler=apple-clang\ncompiler.libcxx=libc++\ncompiler.version=15\nos=Macos\nos_build=Macos\n[options]\n[build_requires]\n[env]\n"
+}

@@ -1,0 +1,1 @@
+. "/Users/jordanta/conantest/test_package/build/Release/generators/conanrunenv-release-armv8.sh"
