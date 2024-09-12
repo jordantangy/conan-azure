@@ -34,7 +34,8 @@ steps:
     extraArguments: '-r fadir-conan'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    
+    workingDirectory: '/Users/jordanta/conan-azure'
+
 
 - task: JFrogConan@1
   inputs:
