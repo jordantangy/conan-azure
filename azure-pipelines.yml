@@ -29,7 +29,7 @@ steps:
 - task: JFrogConan@1
   inputs:
     conanCommand: 'Upload'
-    patternOrReference: 'test*'
+    patternOrReference: '*'
     extraArguments: '-r conan-remote --all'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
