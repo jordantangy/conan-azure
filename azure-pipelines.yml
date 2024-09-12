@@ -39,7 +39,7 @@ steps:
 - task: JFrogConan@1
   inputs:
     conanCommand: 'Upload'
-    patternOrReference: 'test/1.0/1.0/8202ddb566ba7436625283e028d463b6/package/c6a7b978c36bfbdf05646cef650d3b8d3c8bea46/c26017262d11200befbd9cee7cefd978'
+    patternOrReference: 'test/1.0/1.0'
     extraArguments: '-r fadir-conan'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
