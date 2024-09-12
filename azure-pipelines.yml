@@ -34,7 +34,7 @@ steps:
     extraArguments: '-r fadir-conan'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    workingDirectory: '/Users/jordanta/myagent/_work/2/s/conantest'
+    workingDirectory: '/Users/jordanta/myagent/'
 
 - task: JFrogConan@1
   inputs:
@@ -44,8 +44,7 @@ steps:
     extraArguments: '-r fadir-conan'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    workingDirectory: '/Users/jordanta/myagent/_work/2/s/conantest'
-
+    workingDirectory: '/Users/jordanta/myagent/'
 
 
 - task: JFrogConan@1
@@ -55,7 +54,7 @@ steps:
     extraArguments: '-r fadir-conan'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    workingDirectory: '/Users/jordanta/myagent/_work/2/s/conantest'
+    workingDirectory: '/Users/jordanta/myagent/'
 
 
 
