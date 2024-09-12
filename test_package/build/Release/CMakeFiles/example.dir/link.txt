@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/c++ -stdlib=libc++ -O3 -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/example.dir/src/example.cpp.o -o example  /Users/jordanta/.conan/data/test/1.0/test/1.0/package/c6a7b978c36bfbdf05646cef650d3b8d3c8bea46/lib/libtest.a

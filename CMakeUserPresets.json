@@ -4,6 +4,7 @@
         "conan": {}
     },
     "include": [
-        "/Users/jordanta/conantest/build/Release/generators/CMakePresets.json"
+        "/Users/jordanta/conantest/build/Release/generators/CMakePresets.json",
+        "/Users/jordanta/conan-azure/build/Release/generators/CMakePresets.json"
     ]
 }
