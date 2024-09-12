@@ -35,25 +35,15 @@ steps:
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     
-- task: JFrogConan@1
-  inputs:
-    conanCommand: 'Create'
-    patternOrReference: '.'
-    extraArguments: 'test/1.0'
-    buildName: '$(Build.DefinitionName)'
-    buildNumber: '$(Build.BuildNumber)'
-    workingDirectory: '.'
-
-
-
 
 - task: JFrogConan@1
   inputs:
     conanCommand: 'Upload'
     patternOrReference: 'test/1.0'
-    extraArguments: '--all -r fadir-conan'
+    extraArguments: '-r fadir-conan'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
+    workingDirectory: '/Users/jordanta/conan-azure'
 
 
 
