@@ -45,6 +45,31 @@ steps:
 #     buildName: '$(Build.DefinitionName)'
 #     buildNumber: '$(Build.BuildNumber)'
 
+- task: JFrogConan@1
+  inputs:
+    conanCommand: 'Create'
+    createPath: '.'
+    createReference: 'test/1.0@'
+    extraArguments: '-r fadir-conan --build missing'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
+
+# - task: JFrogConan@1
+#   inputs:
+#     conanCommand: 'Upload'
+#     patternOrReference: 'test/1.0@'
+#     extraArguments: '-r fadir-conan'
+#     buildName: '$(Build.DefinitionName)'
+#     buildNumber: '$(Build.BuildNumber)'
+
+
+- task: JFrogConan@1
+  inputs:
+    conanCommand: 'Upload'
+    patternOrReference: 'test/1.0@'
+    extraArguments: '-r fadir-conan --all'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
 # - task: JFrogConan@1
 #   inputs:
 #     conanCommand: 'Upload'
@@ -58,3 +83,5 @@ steps:
     artifactoryConnection: 'jordanta-rt'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
+
+
