@@ -46,11 +46,13 @@ steps:
     buildNumber: '$(Build.BuildNumber)'
     workingDirectory: '/Users/jordanta/myagent/_work/2/s/testconan'
 
+
+
 - task: JFrogConan@1
   inputs:
     conanCommand: 'Upload'
     patternOrReference: 'test/1.0'
-    extraArguments: '-r fadir-conan --all'
+    extraArguments: '-r fadir-conan'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     workingDirectory: '/Users/jordanta/myagent/_work/2/s/testconan'
