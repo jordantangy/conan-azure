@@ -34,6 +34,14 @@ steps:
     extraArguments: '-r fadir-conan'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
+    
+- task: JFrogConan@1
+  inputs:
+    conanCommand: 'Create'
+    patternOrReference: '.'
+    extraArguments: 'test/1.0'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
 
 
 - task: JFrogConan@1
