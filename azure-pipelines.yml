@@ -1,0 +1,41 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+
+- task: JFrogConan@1
+  inputs:
+    conanCommand: 'Add Remote'
+    remoteName: 'conan-remote'
+    artifactoryConnection: 'jordanta-rt'
+    conanRepo: 'conan-test-v'
+    purgeExistingRemotes: false
+
+- task: JFrogConan@1
+  inputs:
+    conanCommand: 'Upload'
+    patternOrReference: 'Conan-min*'
+    extraArguments: '-r conan-remote --all'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
+
+- task: JFrogPublishBuildInfo@1
+  inputs:
+    artifactoryConnection: 'jordanta-rt'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
