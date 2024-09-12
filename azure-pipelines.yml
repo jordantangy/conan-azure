@@ -35,6 +35,12 @@ steps:
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
 
+- task: JFrogConan@1
+  inputs:
+    conanCommand: 'Custom'
+    customArguments: 'Upload test/1.0 -r fadir-conan'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
 
 - task: JFrogConan@1
   inputs:
