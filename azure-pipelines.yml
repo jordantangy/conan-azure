@@ -42,6 +42,9 @@ steps:
     extraArguments: 'test/1.0'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
+    workingDirectory: '.'
+
+
 
 
 - task: JFrogConan@1
