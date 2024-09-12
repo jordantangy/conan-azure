@@ -34,21 +34,24 @@ steps:
     extraArguments: '-r fadir-conan'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
+    
 
-- task: JFrogConan@1
-  inputs:
-    conanCommand: 'Custom'
-    customArguments: 'upload test/1.0 -r fadir-conan'
-    buildName: '$(Build.DefinitionName)'
-    buildNumber: '$(Build.BuildNumber)'
 
-- task: JFrogConan@1
-  inputs:
-    conanCommand: 'Upload'
-    patternOrReference: './'
-    extraArguments: '-r fadir-conan'
-    buildName: '$(Build.DefinitionName)'
-    buildNumber: '$(Build.BuildNumber)'
+
+# - task: JFrogConan@1
+#   inputs:
+#     conanCommand: 'Custom'
+#     customArguments: 'upload test/1.0 -r fadir-conan'
+#     buildName: '$(Build.DefinitionName)'
+#     buildNumber: '$(Build.BuildNumber)'
+
+# - task: JFrogConan@1
+#   inputs:
+#     conanCommand: 'Upload'
+#     patternOrReference: './'
+#     extraArguments: '-r fadir-conan'
+#     buildName: '$(Build.DefinitionName)'
+#     buildNumber: '$(Build.BuildNumber)'
 
 - task: JFrogPublishBuildInfo@1
   inputs:
