@@ -22,7 +22,7 @@ steps:
   inputs:
     conanCommand: 'Add Remote'
     remoteName: 'fadir-conan'
-    artifactoryConnection: 'jordanta-rtest'
+    artifactoryConnection: 'jordanta-rt'
     conanRepo: 'conan-test-v'
     purgeExistingRemotes: false
     
@@ -80,7 +80,7 @@ steps:
 
 - task: JFrogPublishBuildInfo@1
   inputs:
-    artifactoryConnection: 'jordanta-rtest'
+    artifactoryConnection: 'jordanta-rt'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
 
